@@ -1,8 +1,8 @@
 {
-  "name": "app-vue-in-ks",
+  "name": "app-vue",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "lifan06 <lifan06@kuaishou.com>",
+  "author": "urBetsy",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

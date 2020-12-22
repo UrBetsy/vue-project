@@ -1,4 +1,4 @@
-# app-vue-in-ks
+# app-vue
 
 > A Vue.js project
 
