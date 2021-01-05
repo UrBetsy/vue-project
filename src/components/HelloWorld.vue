@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <div>过滤器{{filterValue | filterAddTwo}}</div>
     <functional :items="[1, 2, 3, 4]"></functional>
     <select v-model="value">
       <option disabled value="0">请选择</option>
@@ -11,23 +12,27 @@
       v-model="inputValue"
     >
     </model-com>
+    <directiveCom />
   </div>
 </template>
 
 <script>
 import functional from './functional'
 import modelCom from './modelCom'
+import directiveCom from './directiveCom'
 export default {
   name: 'HelloWorld',
   component: {
     functional,
-    modelCom
+    modelCom,
+    directiveCom
   },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
       value: 0,
-      inputValue: '我是默认值'
+      inputValue: '我是默认值',
+      filterValue: 4
     }
   },
   methods: {

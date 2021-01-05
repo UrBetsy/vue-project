@@ -11,7 +11,9 @@
                     </router-link>
                 </el-aside>
                 <el-main class="content">
-                    <router-view/>
+                    <transition name="fold-right">
+                        <router-view/>
+                    </transition>
                 </el-main>
             </el-container>
         </el-container>
@@ -26,7 +28,7 @@ export default {
 
 <style>
 #app {
-  color: #2c3e50;
+  color: hotpink;
   height: 100vh;
 }
 .header {
@@ -37,5 +39,47 @@ export default {
 }
 .content {
     background: white;
+}
+.fold-right-enter-active {
+    animation: fold-right-in cubic-bezier(0.22, 1, 0.36, 1) 0.6s;
+    position: absolute;
+    will-change: transform;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.fold-right-leave-active {
+    animation: fold-right-out cubic-bezier(0.22, 1, 0.36, 1) 0.6s;
+    position: absolute;
+    will-change: transform;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+@keyframes fold-right-in {
+    0% {
+        min-width: 100vw;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        position: absolute;
+    }
+    100% {
+        min-width: 100vw;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        position: absolute;
+    }
+}
+@keyframes fold-right-out {
+    0% {
+        min-width: 100vw;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        position: absolute;
+    }
+    100% {
+        min-width: 100vw;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        position: absolute;
+    }
 }
 </style>
