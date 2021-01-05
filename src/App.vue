@@ -3,7 +3,13 @@
         <el-container>
             <el-header class="header">Header</el-header>
             <el-container class="container">
-                <el-aside class="aside">Aside</el-aside>
+                <el-aside class="aside">
+                    <router-link
+                        to="/father/countdown"
+                    >
+                        榜单内容
+                    </router-link>
+                </el-aside>
                 <el-main class="content">
                     <router-view/>
                 </el-main>
