@@ -21,18 +21,18 @@ export default {
   name: 'HelloWorld',
   component: {
     functional,
-    modelCom,
+    modelCom
   },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
       value: 0,
-      inputValue: '我是默认值',
-    };
+      inputValue: '我是默认值'
+    }
   },
   methods: {
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

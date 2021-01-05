@@ -9,10 +9,10 @@ export default Vue.component('functional', {
       required: true
     }
   },
-  render: function(createElement, context) {
-    return createElement('div', 'hello');
+  render: function (createElement, context) {
+    return createElement('div', 'hello')
   }
-});
+})
 </script>
 
 <style scoped></style>

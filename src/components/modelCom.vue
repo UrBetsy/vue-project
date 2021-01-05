@@ -10,7 +10,7 @@ export default Vue.component('modelCom', {
   name: 'modelCom',
   model: {
     prop: 'value',
-    event: 'input',
+    event: 'input'
   },
   data () {
     return {
@@ -19,13 +19,13 @@ export default Vue.component('modelCom', {
   props: {
     value: {
       type: String,
-      default: '',
-    },
+      default: ''
+    }
   },
   methods: {
   },
   component: {}
-});
+})
 </script>
 
 <style scoped>

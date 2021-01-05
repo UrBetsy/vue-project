@@ -21,22 +21,22 @@
 <script>
 import FuncTimer from '../function_components/FuncTimer.vue'
 export default {
-    name: 'CountDown',
-    components: {
-        FuncTimer,
-    },
-    data() {
-        return {
-            startTime: '2021-01-04 12:12:12',
-            endTime: '2021-01-06 12:12:12',
-        };
-    },
-    methods: {
-        padTimeString(timeNumber) {
-            return String(timeNumber).padStart(2, '0');
-        },
+  name: 'CountDown',
+  components: {
+    FuncTimer
+  },
+  data () {
+    return {
+      startTime: '2021-01-04 12:12:12',
+      endTime: '2021-01-06 12:12:12'
     }
-};
+  },
+  methods: {
+    padTimeString (timeNumber) {
+      return String(timeNumber).padStart(2, '0')
+    }
+  }
+}
 </script>
 
 <style scoped>

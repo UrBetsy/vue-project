@@ -1,4 +1,5 @@
 <script>
+/* eslint-disable */
 import day from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 day.extend(duration);
