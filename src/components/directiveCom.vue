@@ -6,23 +6,23 @@
 </template>
 
 <script>
-import Vue from 'vue'
+import Vue from 'vue';
 export default Vue.component('directiveCom', {
-  name: 'directiveCom',
-  data () {
-    return {
-      value: 0
-    }
-  },
-  methods: {
-    add (e) {
-      if (!this.$refs.btn.isDisableClick) {
-        this.value += 1
-      }
-    }
-  },
-  component: {}
-})
+    name: 'directiveCom',
+    data () {
+        return {
+            value: 0,
+        };
+    },
+    methods: {
+        add (e) {
+            if (!this.$refs.btn.isDisableClick) {
+                this.value += 1;
+            }
+        },
+    },
+    component: {},
+});
 </script>
 
 <style scoped>

@@ -24,6 +24,9 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'indent': ['warn', 4], // 缩进4个空格
+    'comma-dangle': ['warn', 'always'], // 最后一项带逗号always，不带逗号never
+    'semi': ['warn', 'always'], // 带分号，always或者never
   }
 }

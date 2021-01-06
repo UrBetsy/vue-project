@@ -1,5 +1,4 @@
 <script>
-/* eslint-disable */
 import day from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 day.extend(duration);
@@ -26,18 +25,18 @@ export default {
             type: Number,
             default: 1000,
         },
-        /** 返回的倒计时字符串格式化方式*/
+        /** 返回的倒计时字符串格式化方式 */
         format: {
             type: String,
             default: 'HH:mm:ss',
         },
-        /** 是否禁止计时，禁止的话只传页面加载时的初始状态*/
+        /** 是否禁止计时，禁止的话只传页面加载时的初始状态 */
         disableInterval: {
             type: Boolean,
             default: false,
         },
     },
-    mounted() {
+    mounted () {
         console.log(111);
         if (this.reverse) {
             this.reverseTimer();
@@ -45,14 +44,14 @@ export default {
             this.timer();
         }
     },
-    beforeDestroy() {
+    beforeDestroy () {
         this.timeManager && clearInterval(this.timeManager);
     },
     methods: {
-        validDate(timeString) {
+        validDate (timeString) {
             return day(timeString).isValid();
         },
-        reverseTimer() {
+        reverseTimer () {
             if (!this.validDate(this.endTime)) {
                 return;
             }
@@ -62,7 +61,7 @@ export default {
                 : day();
             this.setInterval(startTime, endTime);
         },
-        timer() {
+        timer () {
             if (!this.validDate(this.startTime)) {
                 return;
             }
@@ -72,7 +71,7 @@ export default {
                 : day('2038-01-19', 'YYYY-MM-DD');
             this.setInterval(startTime, endTime);
         },
-        check(start, end) {
+        check (start, end) {
             const current = day();
             if (current.isBefore(start)) {
                 return false;
@@ -85,7 +84,7 @@ export default {
             this.enabled = true;
             return true;
         },
-        setInterval(start, end) {
+        setInterval (start, end) {
             if (!this.check(start, end)) {
                 return;
             }
@@ -100,7 +99,7 @@ export default {
                 this.changeState(start, end);
             }, this.interval);
         },
-        changeState(start, end) {
+        changeState (start, end) {
             const currentTime = day();
             if (this.reverse) {
                 this.count = end.diff(currentTime);
@@ -109,7 +108,7 @@ export default {
             }
             this.duration = day.duration(this.count).$d;
         },
-        formatCount() {
+        formatCount () {
             const {
                 years,
                 months,
@@ -142,7 +141,7 @@ export default {
             return format;
         },
     },
-    data() {
+    data () {
         return {
             started: false,
             ended: false,
@@ -159,7 +158,7 @@ export default {
             },
         };
     },
-    render() {
+    render () {
         return this.$scopedSlots.default({
             /** 是否开始**/
             started: this.started,

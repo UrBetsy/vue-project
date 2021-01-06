@@ -1,3 +1,3 @@
 export const filterAddTwo = value => {
-  return value / 2
-}
+    return value / 2;
+};

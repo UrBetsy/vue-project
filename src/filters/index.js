@@ -1,8 +1,8 @@
 
 import {
-  filterAddTwo
-} from '@/utils/util'
+    filterAddTwo,
+} from '@/utils/util';
 
 export default {
-  filterAddTwo
-}
+    filterAddTwo,
+};

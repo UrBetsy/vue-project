@@ -22,14 +22,14 @@
 
 <script>
 export default {
-  name: 'App'
-}
+    name: 'App',
+};
 </script>
 
 <style>
 #app {
-  color: hotpink;
-  height: 100vh;
+    color: hotpink;
+    height: 100vh;
 }
 .header {
     background: rosybrown;
