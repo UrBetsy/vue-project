@@ -28,7 +28,7 @@ export default {
     data () {
         return {
             startTime: '2021-01-04 12:12:12',
-            endTime: '2021-01-06 12:12:12',
+            endTime: '2021-01-07 12:12:12',
         };
     },
     methods: {

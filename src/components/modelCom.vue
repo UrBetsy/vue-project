@@ -1,13 +1,14 @@
 <template>
-  <div class='hello'>
-    <input :value="value || ''" @input="$emit('input', $event.target.value)" />
-  </div>
+    <div class='hello'>
+        <input :value="value || ''" @input="$emit('input', $event.target.value)" />
+    </div>
 </template>
 
 <script>
 import Vue from 'vue';
 export default Vue.component('modelCom', {
     name: 'modelCom',
+    component: {},
     model: {
         prop: 'value',
         event: 'input',
@@ -24,7 +25,6 @@ export default Vue.component('modelCom', {
     },
     methods: {
     },
-    component: {},
 });
 </script>
 
