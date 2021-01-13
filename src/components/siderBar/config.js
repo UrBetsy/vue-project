@@ -1,29 +1,37 @@
 export const navList = [
     {
-        title: '首页',
+        title: 'lifankeke-learn',
         icon: 'el-icon-s-custom',
         children: [
             {
-                path: '/countdown',
-                title: 'countdown',
+                path: '/learn/functional-component',
+                title: '功能组件',
             },
             {
-                path: '/countdown',
-                title: 'countdown',
+                path: '/learn/count-down',
+                title: '定时器',
+            },
+            {
+                path: '/learn/model-component',
+                title: 'v-model组件',
+            },
+            {
+                path: '/learn/test-directive',
+                title: '自定义指令',
             },
         ],
     },
     {
-        title: '首页',
+        title: 'lifankeke-blog',
         icon: 'el-icon-s-custom',
         children: [
             {
-                path: '/countdown',
-                title: 'countdown',
+                path: '/blog/vue1',
+                title: 'vue基础1',
             },
             {
-                path: '/countdown',
-                title: 'countdown',
+                path: '/blog/vue2',
+                title: 'vue基础2',
             },
         ],
     },

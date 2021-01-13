@@ -1,18 +1,15 @@
 <script>
 import Vue from 'vue';
-export default Vue.component('functional', {
+export default {
     name: 'functional',
-    functional: true,
     props: {
-        items: {
-            type: Array,
-            required: true,
-        },
     },
-    render: function (createElement, context) {
-        return createElement('div', 'hello');
+    render () {
+        return this.$scopedSlots.default({
+            items: 3,
+        });
     },
-});
+};
 </script>
 
 <style scoped></style>

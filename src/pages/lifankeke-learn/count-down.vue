@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import FuncTimer from '../function_components/FuncTimer.vue';
+import FuncTimer from '@/components/FuncTimer.vue';
 export default {
     name: 'CountDown',
     components: {
@@ -28,7 +28,7 @@ export default {
     data () {
         return {
             startTime: '2021-01-04 12:12:12',
-            endTime: '2021-01-07 12:12:12',
+            endTime: '2090-01-07 12:12:12',
         };
     },
     methods: {

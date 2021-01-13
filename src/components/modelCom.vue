@@ -1,6 +1,6 @@
 <template>
     <div class='hello'>
-        <input :value="value || ''" @input="$emit('input', $event.target.value)" />
+        <input :value="inputValue || ''" @input="$emit('input', $event.target.value)" />
     </div>
 </template>
 
@@ -8,7 +8,7 @@
 import Vue from 'vue';
 export default Vue.component('modelCom', {
     name: 'modelCom',
-    component: {},
+    components: {},
     model: {
         prop: 'value',
         event: 'input',
@@ -18,7 +18,7 @@ export default Vue.component('modelCom', {
         };
     },
     props: {
-        value: {
+        inputValue: {
             type: String,
             default: '',
         },
